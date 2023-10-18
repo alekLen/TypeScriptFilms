@@ -1,7 +1,6 @@
 /// <reference path="Scripts/typings/jquery/jquery.d.ts"/>
 $(() => {
     const parentDiv = document.getElementById('content');
-    // let dElement = document.createElement('div');
     const path1 = "https://www.omdbapi.com/?apikey=96c14996&t=";
     const selectElement = document.getElementById('typeMove');
     const inputElement = document.getElementById('name');
@@ -14,8 +13,6 @@ $(() => {
     const span2Element = document.createElement('span');
     const span3Element = document.createElement('span');
     const pElement = document.createElement('p');
-    // const formElement = document.createElement('form');
-    // const inElement = document.createElement('input');
     const subElement = document.createElement('button');
     subElement.textContent = 'Details';
     $('#search').click((e) => {
@@ -30,6 +27,8 @@ $(() => {
                 imgElement.src = data.Poster;
                 imgElement.className = 'poster';
                 imgElement.style.padding = '15px';
+                imgElement.style.width = '200px';
+                imgElement.style.maxHeight = 'auto';
                 imgElement.alt = 'Poster';
                 imgElement.style.backgroundColor = 'sandybrown';
                 span1Element.innerHTML = data.Title;
@@ -58,6 +57,7 @@ $(() => {
                     $('#d').html(data.Director);
                     $('#w').html(data.Writer);
                     $('#c').html(data.Country);
+                    $('#l').html(data.Language);
                     $('#r').html(data.Ratings[0].Source + ":      " + data.Ratings[0].Value);
                     $('#p').html(data.Plot);
                 });

@@ -4,4 +4,13 @@
 
 span {
     font-style: italic;
+   
+}
+.poster {
+    padding: 15px;
+    background-color: lavenderblush;
+}
+.film {
+    display: flex;
+    justify-content: center;
 }

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+  
+    <link rel="stylesheet" href="app.css" type="text/css" />   
+</head>
+<body style="background-color:lemonchiffon">
+    <h1 style="display:flex;justify-content:center;">Movies</h1>
+   
+        <div style="display: flex; justify-content: center; padding: 50px;padding-top:0">
+            <div style=" padding: 50px; background-color:lavenderblush" >
+                <input type="text" id="name" name="name" /><br />
+                <select id="typeMove" name="typeMove">
+                    <option value="movie">movie</option>
+                    <option value="series">series</option>
+                    <option value="episode">episode</option>
+                </select>&nbsp;&nbsp;
+                <input type="button" id="search" name="search" value="search" />
+            </div>
+        </div>
+    
+    <div style="display: flex; justify-content: center;"  >
+        <div id="con" style="display: none; background-color: lavenderblush; padding: 10px;">
+            <img id="im" name="im" width="200" height="300" alt="Poster" />
+        </div>
+        <div id="con1" style="display:none">
+            <span name="n" id="n" style="padding:30px"></span><br />
+            <span name="y" id="y" style="padding:30px"></span><br />
+            <span name="g" id="g" style="padding:30px"></span><br />
+        </div>
+    </div>
+    <div id="err" style="display: none; justify-content: center;color:red;font-size:1.5em;">Not found</div>
+    <script src="Scripts/jquery-3.7.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -21,8 +21,10 @@ $(() => {
         $('#search').click((e) => {
             const n = inputElement.value;
             const t = selectElement.value;
-            const str: string = path1 + n + "&type=" + t;
-      
+            let str: string = path1 + n + "&type=" + t;
+            if (t == "episode") {
+                str = path1 + n + "&Season=1&Episode=1";
+            }
             $.getJSON(str,
                 function (data) {
                     $('#content1').css('display', 'none');
